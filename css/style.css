@@ -1,0 +1,1572 @@
+/* ==========================
+   GOOGLE FONTS
+========================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Oswald:wght@300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+
+    font-family: 'Inter', sans-serif;
+    background: #0f1115;
+    color: #ffffff;
+    line-height: 1.7;
+    overflow-x: hidden;
+
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+/* ==========================
+   VARIABLES
+========================== */
+
+:root {
+
+    --primary: #D62828;
+    --secondary: #F77F00;
+    --dark: #0f1115;
+    --dark2: #181C23;
+    --card: #20252E;
+    --light: #ffffff;
+    --gray: #a4a8af;
+    --radius: 18px;
+    --transition: .35s;
+
+}
+
+/* ==========================
+   CONTAINER
+========================== */
+
+.container {
+
+    width: min(1200px, 92%);
+    margin: auto;
+
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+header {
+
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    background: rgba(10, 10, 10, .85);
+
+    backdrop-filter: blur(10px);
+
+    z-index: 999;
+
+    transition: .3s;
+
+}
+
+.nav {
+
+    height: 90px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo img {
+
+    width: 72px;
+
+}
+
+nav ul {
+
+    display: flex;
+    gap: 35px;
+
+}
+
+nav a {
+
+    color: #fff;
+    font-weight: 500;
+    transition: .3s;
+
+}
+
+nav a:hover {
+
+    color: var(--primary);
+
+}
+
+nav a.active {
+
+    color: var(--primary);
+
+}
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    /* Donkere verloop-overlay + achtergrondafbeelding */
+    background: linear-gradient(90deg, rgba(11, 12, 16, 0.95) 0%, rgba(11, 12, 16, 0.7) 40%, rgba(11, 12, 16, 0.2) 100%), 
+                url('images/banner.jpg') no-repeat center center / cover;
+}
+
+.hero-content {
+    max-width: 550px; /* Zorgt dat de tekst niet over de bokser heen loopt */
+    padding-top: 60px;
+}
+
+.hero-content h1 {
+    font-family: 'Oswald', sans-serif; /* Gebruik Oswald of een soortgelijk strak lettertype */
+    font-size: 3.5rem;
+    line-height: 1.1;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+.hero-content .subtitle {
+    color: #889eac; /* Blauw-achtige accentkleur zoals in het voorbeeld */
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1.5px;
+    margin-bottom: 15px;
+}
+
+.hero-content .description {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* --- KNOPPEN --- */
+.buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-decoration: none;
+    border-radius: 4px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.btn-red {
+    background-color: #b71c1c;
+    color: #ffffff;
+    border: 2px solid #b71c1c;
+}
+
+.btn-red:hover {
+    background-color: #d32f2f;
+    border-color: #d32f2f;
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #ffffff;
+    border: 2px solid #333333;
+}
+
+.btn-outline:hover {
+    border-color: #ffffff;
+}
+
+#hamburger {
+    display: none; /* Verbergen op desktop */
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn {
+
+    background: var(--primary);
+
+    color: #fff;
+
+    padding: 14px 30px;
+
+    border-radius: 50px;
+
+    transition: .3s;
+
+    display: inline-block;
+
+    font-weight: 600;
+
+}
+
+.btn:hover {
+
+    background: #b41d1d;
+
+    transform: translateY(-3px);
+
+}
+
+.btn-outline {
+
+    border: 2px solid #fff;
+
+    color: #fff;
+
+    padding: 13px 30px;
+
+    border-radius: 50px;
+
+    transition: .3s;
+
+    display: inline-block;
+
+}
+
+.btn-outline:hover {
+
+    background: #fff;
+
+    color: #111;
+
+}
+
+/* ==========================
+   HERO
+========================== */
+
+.hero {
+
+    position: relative;
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    overflow: hidden;
+
+    padding-top: 90px;
+
+}
+
+.overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background:
+
+        linear-gradient(90deg,
+
+            rgba(15, 17, 21, .95),
+
+            rgba(15, 17, 21, .70),
+
+            rgba(15, 17, 21, .15));
+
+}
+
+.hero-grid {
+
+    position: relative;
+
+    z-index: 5;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+.subtitle {
+
+    color: var(--secondary);
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+    font-size: .9rem;
+
+    font-weight: 600;
+
+}
+
+.hero h1 {
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 5rem;
+
+    line-height: 1;
+
+    margin: 20px 0;
+
+}
+
+.hero p {
+
+    color: var(--gray);
+
+    font-size: 1.1rem;
+
+    max-width: 550px;
+
+}
+
+.buttons {
+
+    display: flex;
+
+    gap: 20px;
+
+    margin-top: 40px;
+
+}
+
+.hero-image {
+
+    position: relative;
+
+}
+
+.hero-image img {
+
+    border-radius: 30px;
+
+    box-shadow:
+
+        0 20px 60px rgba(0, 0, 0, .4);
+
+}
+
+/* ==========================
+   FEATURES
+========================== */
+
+.features {
+
+    padding: 110px 0;
+
+}
+
+/* Container die de 4 kolommen maakt */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+/* De individuele kaart */
+.card {
+    background: #1a1d24; /* Pas aan naar var(--card) als je CSS variabelen gebruikt */
+    border-radius: 20px;
+    padding: 45px 30px;
+    text-align: center;
+    transition: transform .35s, background .35s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    background: #262d38;
+}
+
+/* De icon-box zonder achtergrondcirkel */
+.icon-box {
+    margin: 0 auto 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icon-box i {
+    font-size: 45px;
+    color: #D62828; /* Rode kleur voor het icoon */
+    transition: transform .35s;
+}
+
+.card:hover .icon-box i {
+    transform: rotate(10deg) scale(1.1);
+}
+
+/* Tekst styling binnen de kaart */
+.card h3 {
+    margin-bottom: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+.card p {
+    color: #a0a6b1; /* Pas aan naar var(--gray) */
+    line-height: 1.5;
+}
+
+/*=========================
+    ABOUT
+=========================*/
+
+.about {
+
+    padding: 120px 0;
+
+}
+
+.about-grid {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+
+}
+
+.about img {
+
+    border-radius: 25px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, .35);
+
+}
+
+.section-title {
+
+    display: inline-block;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+    margin-bottom: 15px;
+
+}
+
+.about h2 {
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 3rem;
+    margin-bottom: 25px;
+
+}
+
+.about p {
+
+    color: var(--gray);
+    margin-bottom: 25px;
+
+}
+
+.about ul {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+
+}
+
+.about li {
+
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    transition: .3s;
+    font-weight: 500;
+
+}
+
+.about li:hover {
+
+    background: var(--primary);
+
+}
+
+/*=========================
+      CTA
+=========================*/
+
+.cta {
+
+    padding: 120px 0;
+    text-align: center;
+    background: linear-gradient(135deg, #D62828, #8B0000);
+
+}
+
+.cta h2 {
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 3.2rem;
+    margin-bottom: 20px;
+
+}
+
+.cta p {
+
+    max-width: 650px;
+    margin: auto;
+    margin-bottom: 40px;
+    opacity: .9;
+
+}
+
+.cta .btn {
+
+    background: #fff;
+    color: #111;
+
+}
+
+.cta .btn:hover {
+
+    background: #ececec;
+
+}
+
+/*=========================
+      FOOTER
+=========================*/
+
+footer {
+
+    background: #090b0f;
+    padding: 80px 0 30px;
+
+}
+
+.footer {
+
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px;
+
+}
+
+.footer-logo {
+
+    width: 90px;
+    margin-bottom: 20px;
+
+}
+
+.footer p {
+
+    color: var(--gray);
+
+}
+
+.footer h3 {
+
+    margin-bottom: 25px;
+    font-family: 'Oswald';
+    font-size: 1.4rem;
+
+}
+
+.footer ul li {
+
+    margin-bottom: 14px;
+
+}
+
+.footer ul a {
+
+    color: var(--gray);
+    transition: .3s;
+
+}
+
+.footer ul a:hover {
+
+    color: var(--primary);
+
+}
+
+.social {
+
+    display: flex;
+    gap: 18px;
+
+}
+
+.social a {
+
+    width: 48px;
+    height: 48px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--card);
+
+    color: #fff;
+
+    transition: .3s;
+
+}
+
+.social a:hover {
+
+    background: var(--primary);
+    transform: translateY(-6px);
+
+}
+
+/*=========================
+      PAGINA HEADER
+=========================*/
+
+.page-header {
+
+    height: 420px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    text-align: center;
+
+    background: url("../assets/hero.jpg") center center/cover;
+
+    position: relative;
+
+}
+
+.page-header::before {
+
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, .65);
+
+}
+
+.page-header>* {
+
+    position: relative;
+    z-index: 2;
+
+}
+
+.page-header h1 {
+
+    font-size: 4rem;
+    font-family: 'Oswald';
+    margin-bottom: 15px;
+
+}
+
+.page-header p {
+
+    color: #ddd;
+
+}
+
+/*=========================
+      SECTIONS
+=========================*/
+
+section {
+
+    position: relative;
+
+}
+
+section h2 {
+
+    font-family: 'Oswald';
+    font-size: 2.7rem;
+    margin-bottom: 25px;
+
+}
+
+section p {
+
+    color: var(--gray);
+
+}
+
+/*==========================================
+    BESTUUR PAGINA
+==========================================*/
+
+.bestuur {
+
+    padding: 120px 0;
+
+}
+
+.bestuur-grid {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 35px;
+
+}
+
+.bestuur-card {
+
+    background: var(--card);
+    border-radius: 20px;
+    overflow: hidden;
+    transition: .35s;
+
+    box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+
+}
+
+.bestuur-card:hover {
+
+    transform: translateY(-10px);
+
+}
+
+.bestuur-card img {
+
+    width: 100%;
+    height: 320px;
+    object-fit: cover;
+
+}
+
+.bestuur-content {
+
+    padding: 30px;
+
+}
+
+.bestuur-content h3 {
+
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.8rem;
+    margin-bottom: 8px;
+
+}
+
+.bestuur-content span {
+
+    display: block;
+    color: var(--secondary);
+    margin-bottom: 20px;
+    font-weight: 600;
+
+}
+
+.bestuur-content p {
+
+    color: var(--gray);
+
+}
+
+/*==========================================
+    INSCHRIJVEN
+==========================================*/
+
+.inschrijven {
+
+    padding: 120px 0;
+
+}
+
+.form-wrapper {
+
+    max-width: 850px;
+    margin: auto;
+
+    background: var(--card);
+
+    padding: 50px;
+
+    border-radius: 25px;
+
+}
+
+.form-wrapper h2 {
+
+    text-align: center;
+    margin-bottom: 40px;
+
+}
+
+.form-group {
+
+    margin-bottom: 25px;
+
+}
+
+.form-group label {
+
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 600;
+
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+
+    width: 100%;
+
+    background: #11161d;
+
+    color: #fff;
+
+    border: 1px solid #333;
+
+    border-radius: 12px;
+
+    padding: 16px;
+
+    outline: none;
+
+    transition: .3s;
+
+    font-size: 16px;
+
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+
+    border-color: var(--primary);
+
+}
+
+.form-group textarea {
+
+    min-height: 180px;
+    resize: vertical;
+
+}
+
+.form-row {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+}
+
+.form-wrapper button {
+
+    width: 100%;
+    border: none;
+    cursor: pointer;
+
+    margin-top: 15px;
+
+}
+
+/*==========================================
+    CONTACT
+==========================================*/
+
+.contact {
+
+    padding: 120px 0;
+
+}
+
+.contact-grid {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+
+}
+
+.contact-card {
+
+    background: var(--card);
+
+    border-radius: 20px;
+
+    padding: 40px;
+
+}
+
+.contact-card h2 {
+
+    margin-bottom: 25px;
+
+}
+
+.contact-info {
+
+    display: flex;
+    gap: 20px;
+    margin-bottom: 28px;
+    align-items: flex-start;
+
+}
+
+.contact-info i {
+
+    width: 60px;
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: var(--primary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+
+}
+
+.contact-info h4 {
+
+    margin-bottom: 5px;
+
+}
+
+.contact-info p {
+
+    color: var(--gray);
+
+}
+
+/*==========================================
+    MAP
+==========================================*/
+
+.map {
+    overflow: hidden;
+    border-radius: 20px;
+    height: 400px;
+
+}
+
+.map iframe {
+
+    width: 100%;
+    height: 100%;
+    border: none;
+
+}
+
+/*==========================================
+    INFO BOXEN
+==========================================*/
+
+.info-boxes {
+
+    padding: 0 0 120px 0;
+
+}
+
+.info-grid {
+
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+
+}
+
+.info-box {
+
+    background: var(--card);
+
+    padding: 40px;
+
+    border-radius: 18px;
+
+    text-align: center;
+
+    transition: .3s;
+
+}
+
+.info-box:hover {
+
+    transform: translateY(-8px);
+
+}
+
+.info-box i {
+
+    font-size: 42px;
+
+    color: var(--primary);
+
+    margin-bottom: 20px;
+
+}
+
+.info-box h3 {
+
+    margin-bottom: 15px;
+
+    font-family: 'Oswald';
+
+}
+
+.info-box p {
+
+    color: var(--gray);
+
+}
+
+/*==========================================
+    RESPONSIVE
+==========================================*/
+
+@media (max-width:1100px) {
+
+    .hero-grid {
+
+        grid-template-columns: 1fr;
+        text-align: center;
+
+    }
+
+    .hero-content {
+
+        order: 2;
+
+    }
+
+    .hero-image {
+
+        order: 1;
+        max-width: 600px;
+        margin: auto;
+
+    }
+
+    .hero p {
+
+        margin: auto;
+
+    }
+
+    .buttons {
+
+        justify-content: center;
+
+    }
+
+    .about-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .contact-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .footer {
+
+        grid-template-columns: 1fr 1fr;
+
+    }
+
+    .cards {
+
+        grid-template-columns: repeat(2, 1fr);
+
+    }
+
+    .form-row {
+
+        grid-template-columns: 1fr;
+
+    }
+
+}
+
+@media (max-width:768px) {
+
+    .nav {
+
+        height: 80px;
+
+    }
+
+    .logo img {
+
+        width: 60px;
+
+    }
+
+    #hamburger {
+
+        display: block;
+        z-index: 9999;
+
+    }
+
+    nav {
+
+        position: fixed;
+
+        top: 80px;
+        left: -100%;
+
+        width: 100%;
+        height: calc(100vh - 80px);
+
+        background: #11161d;
+
+        transition: .35s;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    nav.active {
+
+        left: 0;
+
+    }
+
+    nav ul {
+
+        flex-direction: column;
+        gap: 35px;
+        text-align: center;
+
+    }
+
+    nav a {
+
+        font-size: 1.2rem;
+
+    }
+
+    .nav .btn {
+
+        display: none;
+
+    }
+
+    .hero {
+
+        padding-top: 120px;
+
+    }
+
+    .hero h1 {
+
+        font-size: 3.5rem;
+
+    }
+
+    .hero p {
+
+        font-size: 1rem;
+
+    }
+
+    .cards {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .about h2 {
+
+        font-size: 2.3rem;
+
+    }
+
+    .about ul {
+
+        grid-template-columns: 1fr;
+
+    }
+
+    .footer {
+
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+    }
+
+    .social {
+
+        justify-content: center;
+
+    }
+
+    .page-header {
+
+        height: 320px;
+
+    }
+
+    .page-header h1 {
+
+        font-size: 2.8rem;
+
+    }
+
+    .contact-card {
+
+        padding: 30px;
+
+    }
+
+    .form-wrapper {
+
+        padding: 35px;
+
+    }
+
+}
+
+@media(max-width:500px) {
+
+    .container {
+
+        width: 94%;
+
+    }
+
+    .hero h1 {
+
+        font-size: 2.8rem;
+
+    }
+
+    .cta h2 {
+
+        font-size: 2.2rem;
+
+    }
+
+    section {
+
+        padding: 80px 0;
+
+    }
+
+    .btn,
+    .btn-outline {
+
+        width: 100%;
+        text-align: center;
+
+    }
+
+    .buttons {
+
+        flex-direction: column;
+
+    }
+
+    .hero-image img {
+
+        border-radius: 20px;
+
+    }
+
+}
+
+/*==========================================
+    ANIMATIONS
+==========================================*/
+
+.fade-up {
+
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 1s;
+
+}
+
+.fade-up.show {
+
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.zoom {
+
+    overflow: hidden;
+
+}
+
+.zoom img {
+
+    transition: .5s;
+
+}
+
+.zoom:hover img {
+
+    transform: scale(1.08);
+
+}
+
+.card,
+.bestuur-card,
+.info-box,
+.contact-card {
+
+    transition: .35s;
+
+}
+
+.card:hover,
+.bestuur-card:hover,
+.info-box:hover,
+.contact-card:hover {
+
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+
+}
+
+.btn,
+.btn-outline,
+.social a {
+
+    transition: .3s ease;
+
+}
+
+input,
+textarea,
+select {
+
+    transition: .3s;
+
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+
+    box-shadow: 0 0 0 3px rgba(214, 40, 40, .2);
+
+}
+
+/*==========================================
+    SCROLLBAR
+==========================================*/
+
+::-webkit-scrollbar {
+
+    width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+
+    background: #111;
+
+}
+
+::-webkit-scrollbar-thumb {
+
+    background: var(--primary);
+    border-radius: 30px;
+
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    background: #b71c1c;
+
+}
+
+/*==========================================
+    SELECTION
+==========================================*/
+
+::selection {
+
+    background: var(--primary);
+    color: #fff;
+
+}
+
+/*==========================================
+    UTILITIES
+==========================================*/
+
+.text-center {
+
+    text-align: center;
+
+}
+
+.mt-1 {
+    margin-top: 10px;
+}
+
+.mt-2 {
+    margin-top: 20px;
+}
+
+.mt-3 {
+    margin-top: 30px;
+}
+
+.mt-4 {
+    margin-top: 40px;
+}
+
+.mt-5 {
+    margin-top: 50px;
+}
+
+.mb-1 {
+    margin-bottom: 10px;
+}
+
+.mb-2 {
+    margin-bottom: 20px;
+}
+
+.mb-3 {
+    margin-bottom: 30px;
+}
+
+.mb-4 {
+    margin-bottom: 40px;
+}
+
+.mb-5 {
+    margin-bottom: 50px;
+}
+
+.topBtn {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 55px;
+    height: 55px;
+    border: none;
+    border-radius: 50%;
+    background: #D62828;
+    color: #fff;
+    font-size: 20px;
+    cursor: pointer;
+    opacity: 0;
+    pointer-events: none;
+    transition: .3s;
+    z-index: 999;
+}
+
+.topBtn.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.topBtn:hover {
+    transform: translateY(-5px);
+}
+
+.btn {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, .35);
+    transform: scale(0);
+    animation: ripple .6s linear;
+    pointer-events: none;
+}
+
+@keyframes ripple {
+
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+
+}
+
+.social {
+    display: flex;
+    gap: 16px;
+    /* Ruimte tussen de icoontjes */
+    align-items: center;
+}
+
+.social a {
+    color: #fff;
+    /* Standaardkleur van de icoontjes */
+    font-size: 24px;
+    /* Grootte van de icoontjes */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover-effect: verandert kleur en veert licht omhoog */
+.social a:hover {
+    color: #007bff;
+    transform: translateY(-3px);
+}
+
+/* 1. Maak het kalender-icoon wit */
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    /* Draait het zwarte icoontje om naar wit */
+    cursor: pointer;
+}
+
+/* 2. Geef het select-pijltje ruimte aan de rechterkant */
+select {
+    padding-right: 15px;
+    /* Pas deze waarde aan voor meer/minder ruimte */
+    cursor: pointer;
+}
