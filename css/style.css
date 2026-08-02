@@ -172,29 +172,18 @@ nav a.active {
 ========================== */
 
 .btn {
-
     background: var(--primary);
-
     color: #fff;
-
     padding: 14px 30px;
-
     border-radius: 50px;
-
     transition: .3s;
-
     display: inline-block;
-
     font-weight: 600;
-
 }
 
 .btn:hover {
-
     background: #b41d1d;
-
     transform: translateY(-3px);
-
 }
 
 .btn-outline {
@@ -204,15 +193,11 @@ nav a.active {
     border-radius: 50px;
     transition: .3s;
     display: inline-block;
-
 }
 
 .btn-outline:hover {
-
     background: #fff;
-
     color: #111;
-
 }
 
 /* ==========================
@@ -352,75 +337,57 @@ nav a.active {
 =========================*/
 
 .about {
-
     padding: 120px 0;
-
 }
 
 .about-grid {
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 70px;
     align-items: center;
-
 }
 
 .about img {
-
     border-radius: 25px;
     box-shadow: 0 25px 50px rgba(0, 0, 0, .35);
-
 }
 
 .section-title {
-
     display: inline-block;
     color: var(--secondary);
     text-transform: uppercase;
     letter-spacing: 2px;
     font-weight: 600;
     margin-bottom: 15px;
-
 }
 
 .about h2 {
-
     font-family: 'Oswald', sans-serif;
     font-size: 3rem;
     margin-bottom: 25px;
-
 }
 
 .about p {
-
     color: var(--gray);
     margin-bottom: 25px;
-
 }
 
 .about ul {
-
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 18px;
-
 }
 
 .about li {
-
     background: var(--card);
     padding: 18px;
     border-radius: 12px;
     transition: .3s;
     font-weight: 500;
-
 }
 
 .about li:hover {
-
     background: var(--primary);
-
 }
 
 /*=========================
@@ -428,41 +395,31 @@ nav a.active {
 =========================*/
 
 .cta {
-
     padding: 120px 0;
     text-align: center;
-    background: linear-gradient(135deg, #D62828, #8B0000);
-
+    background-color: #20252E;
 }
 
 .cta h2 {
-
     font-family: 'Oswald', sans-serif;
     font-size: 3.2rem;
     margin-bottom: 20px;
-
 }
 
 .cta p {
-
     max-width: 650px;
     margin: auto;
     margin-bottom: 40px;
     opacity: .9;
-
 }
 
 .cta .btn {
-
-    background: #fff;
-    color: #111;
-
+    background: #D62828;
+    color: #fff;
 }
 
 .cta .btn:hover {
-
     background: #ececec;
-
 }
 
 /*=========================
@@ -470,91 +427,64 @@ nav a.active {
 =========================*/
 
 footer {
-
     background: #090b0f;
     padding: 80px 0 30px;
-
 }
 
 .footer {
-
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
     gap: 60px;
-
 }
 
 .footer-logo {
-
     width: 90px;
     margin-bottom: 20px;
-
 }
 
 .footer p {
-
     color: var(--gray);
-
 }
 
 .footer h3 {
-
     margin-bottom: 25px;
     font-family: 'Oswald';
     font-size: 1.4rem;
-
 }
 
 .footer ul li {
-
     margin-bottom: 14px;
-
 }
 
 .footer ul a {
-
     color: var(--gray);
     transition: .3s;
-
 }
 
 .footer ul a:hover {
-
     color: var(--primary);
-
 }
 
 .social {
-
     display: flex;
     gap: 18px;
-
 }
 
 .social a {
-
     width: 48px;
     height: 48px;
-
     border-radius: 50%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background: var(--card);
-
     color: #fff;
-
     transition: .3s;
-
 }
 
 .social a:hover {
-
     background: var(--primary);
     transform: translateY(-6px);
-
 }
 
 /*=========================
@@ -562,50 +492,37 @@ footer {
 =========================*/
 
 .page-header {
-
     height: 420px;
-
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-
     text-align: center;
-
     background: url("../assets/hero.jpg") center center/cover;
-
     position: relative;
 
 }
 
 .page-header::before {
-
     content: "";
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, .65);
-
 }
 
 .page-header>* {
-
     position: relative;
     z-index: 2;
-
 }
 
 .page-header h1 {
-
     font-size: 4rem;
     font-family: 'Oswald';
     margin-bottom: 15px;
-
 }
 
 .page-header p {
-
     color: #ddd;
-
 }
 
 /*=========================
@@ -613,23 +530,17 @@ footer {
 =========================*/
 
 section {
-
     position: relative;
-
 }
 
 section h2 {
-
     font-family: 'Oswald';
     font-size: 2.7rem;
     margin-bottom: 25px;
-
 }
 
 section p {
-
     color: var(--gray);
-
 }
 
 /*==========================================
@@ -751,58 +662,45 @@ section p {
 .form-group input,
 .form-group select,
 .form-group textarea {
-
     width: 100%;
-
     background: #11161d;
-
     color: #fff;
-
     border: 1px solid #333;
-
     border-radius: 12px;
-
     padding: 16px;
-
     outline: none;
-
     transition: .3s;
-
     font-size: 16px;
-
 }
 
 .form-group input:focus,
 .form-group textarea:focus,
 .form-group select:focus {
-
     border-color: var(--primary);
-
 }
 
 .form-group textarea {
-
     min-height: 180px;
     resize: vertical;
-
 }
 
 .form-row {
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-
 }
 
 .form-wrapper button {
-
     width: 100%;
     border: none;
     cursor: pointer;
-
     margin-top: 15px;
 
+}
+
+#terms {
+    width: 10px;
+    margin-right: 10px;
 }
 
 /*==========================================
@@ -810,33 +708,23 @@ section p {
 ==========================================*/
 
 .contact {
-
     padding: 120px 0;
-
 }
 
 .contact-grid {
-
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 60px;
-
 }
 
 .contact-card {
-
     background: var(--card);
-
     border-radius: 20px;
-
     padding: 40px;
-
 }
 
 .contact-card h2 {
-
     margin-bottom: 25px;
-
 }
 
 .contact-info {
@@ -1286,9 +1174,7 @@ section p {
 input,
 textarea,
 select {
-
     transition: .3s;
-
 }
 
 input:focus,
@@ -1470,7 +1356,13 @@ input[type="date"]::-webkit-calendar-picker-indicator {
 
 /* 2. Geef het select-pijltje ruimte aan de rechterkant */
 select {
-    padding-right: 15px;
-    /* Pas deze waarde aan voor meer/minder ruimte */
-    cursor: pointer;
+  /* 1. Schakel het standaard browser-pijltje verplicht uit */
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+
+  /* 3. Zet het pijltje neer op een specifieke plek (pas '50px' aan om te verschuiven) */
+  background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 9l6 6 6-6"/></svg>') !important;
+  background-repeat: no-repeat !important;
+  background-position: calc(100% - 15px) center !important; /* Hoe hoger het getal (bijv. 80px), hoe meer naar links */
 }
