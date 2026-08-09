@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
 
     <script src="https://kit.fontawesome.com/6b7a1f6b39.js" crossorigin="anonymous"></script>
 </head>
@@ -69,104 +71,119 @@
             </div>
 
             <div class="form-wrapper">
-                <form>
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>Voornaam</label>
+                <form class="registration-form" action="/submit" method="POST">
 
-                            <input type="text" required>
-                        </div>
+                    <fieldset class="form-grid">
 
-                        <div class="form-group">
-                            <label>Achternaam</label>
-                            <input type="text" required>
-                        </div>
+                        <div class="form-row">
 
-                    </div>
+                            <div class="form-group">
+                                <label for="first_name">Voornaam</label>
+                                <input type="text" id="first_name" name="first_name" autocomplete="given-name" required
+                                    aria-required="true">
+                            </div>
 
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label>E-mailadres</label>
+                            <div class="form-group">
+                                <label for="last_name">Achternaam</label>
+                                <input type="text" id="last_name" name="last_name" autocomplete="family-name" required
+                                    aria-required="true">
+                            </div>
 
-                            <input type="email" required>
-                        </div>
-
-                        <div class="form-group">
-                            <label>Telefoonnummer</label>
-
-                            <input type="tel" required>
-                        </div>
-                    </div>
-
-                    <div class="form-row">
-
-                        <div class="form-group">
-                            <label>Geboortedatum</label>
-                            <input type="date" required>
                         </div>
 
 
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="email">E-mailadres</label>
+                                <input type="email" id="email" name="email" autocomplete="email" required
+                                    aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone_number">Telefoonnummer</label>
+                                <input type="tel" id="phone_number" name="phone_number" autocomplete="tel" required
+                                    aria-required="true">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="birth_date">Geboortedatum</label>
+                                <input type="date" id="birth_date" name="birth_date" autocomplete="bday" required
+                                    aria-required="true">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="gender">Geslacht</label>
+                                <select id="gender" name="gender" required aria-required="true">
+                                    <option value="">Maak een keuze</option>
+                                    <option value="man">Man</option>
+                                    <option value="vrouw">Vrouw</option>
+                                    <option value="anders">Anders</option>
+                                </select>
+                            </div>
+
+                        </div>
+
+
                         <div class="form-group">
-                            <label>Geslacht</label>
-                            <select required>
+                            <label for="address">Adres</label>
+                            <input type="text" id="address" name="address" autocomplete="street-address">
+                        </div>
+
+
+                        <div class="form-row">
+
+                            <div class="form-group">
+                                <label for="postal_code">Postcode</label>
+                                <input type="text" id="postal_code" name="postal_code" autocomplete="postal-code">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="city">Woonplaats</label>
+                                <input type="text" id="city" name="city" autocomplete="address-level2">
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-group">
+                            <label for="training_level">Trainingsniveau</label>
+
+                            <select id="training_level" name="training_level" required aria-required="true">
                                 <option value="">Maak een keuze</option>
-                                <option>Man</option>
-                                <option>Vrouw</option>
-                                <option>Anders</option>
+                                <option value="beginner">Beginner</option>
+                                <option value="gemiddeld">Gemiddeld</option>
+                                <option value="gevorderd">Gevorderd</option>
+                                <option value="wedstrijdbokser">Wedstrijdbokser</option>
                             </select>
                         </div>
-                    </div>
 
-                    <div class="form-group">
-                        <label>Adres</label>
+                    </fieldset>
 
-                        <input type="text">
-                    </div>
+                </form>
 
-                    <div class="form-row">
-                        <div class="form-group">
+                <div class="form-group">
+                    <label>Waarom wil je lid worden?</label>
 
-                            <label>Postcode</label>
+                    <textarea placeholder="Vertel iets over jezelf..."></textarea>
+                </div>
 
-                            <input type="text">
-                        </div>
+                <div class="form-group">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="terms" name="terms" required>
 
-                        <div class="form-group">
-                            <label>Woonplaats</label>
+                        <span>Ik ga akkoord met de algemene voorwaarden.</span>
+                    </label>
+                </div>
 
-                            <input type="text">
-                        </div>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Trainingsniveau</label>
-
-                        <select required>
-                            <option value="">Maak een keuze</option>
-                            <option>Beginner</option>
-                            <option>Gemiddeld</option>
-                            <option>Gevorderd</option>
-                            <option>Wedstrijdbokser</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
-                        <label>Waarom wil je lid worden?</label>
-
-                        <textarea placeholder="Vertel iets over jezelf..."></textarea>
-                    </div>
-
-                    <div class="form-group">
-                        <label class="checkbox-container">
-                            <input type="checkbox" id="terms" name="terms" required>
-
-                            <span>Ik ga akkoord met de algemene voorwaarden.</span>
-                        </label>
-                    </div>
-
-                    <button class="btn">
-                        Verstuur inschrijving
-                    </button>
+                <button class="btn">
+                    Verstuur inschrijving
+                </button>
                 </form>
             </div>
         </div>
@@ -223,7 +240,7 @@
             <h2>Klaar om te beginnen?</h2>
 
             <p style="color: white;"></p>
-                Meld je vandaag aan en zet de eerste stap richting een sterkere versie van jezelf.
+            Meld je vandaag aan en zet de eerste stap richting een sterkere versie van jezelf.
             </p>
 
             <a href="contact.html" class="btn">

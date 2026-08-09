@@ -627,6 +627,12 @@ section p {
     margin-top: 15px;
 }
 
+.form-grid {
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
 #terms {
     width: 10px;
     margin-right: 10px;
