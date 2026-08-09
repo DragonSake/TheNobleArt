@@ -126,59 +126,21 @@ nav a.active {
 }
 
 /* --- KNOPPEN --- */
-.buttons {
-    display: flex;
-    gap: 15px;
-}
-
-.btn {
-    padding: 12px 28px;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-decoration: none;
-    border-radius: 4px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    display: inline-block;
-}
-
-.btn-red {
-    background-color: #b71c1c;
-    color: #ffffff;
-    border: 2px solid #b71c1c;
-}
-
-.btn-red:hover {
-    background-color: #d32f2f;
-    border-color: #d32f2f;
-}
-
-.btn-outline {
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #333333;
-}
-
-.btn-outline:hover {
-    border-color: #ffffff;
-}
-
-#hamburger {
-    display: none; /* Verbergen op desktop */
-}
-
-/* ==========================
-   BUTTONS
-========================== */
-
 .btn {
     background: var(--primary);
     color: #fff;
     padding: 14px 30px;
     border-radius: 50px;
-    transition: .3s;
+    transition: 0.3s;
     display: inline-block;
     font-weight: 600;
+    font-size: 0.85rem;
+    text-decoration: none;
+    letter-spacing: 1px;
+    border: none;
+    outline: none;
+    box-shadow: none;
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -198,6 +160,16 @@ nav a.active {
 .btn-outline:hover {
     background: #fff;
     color: #111;
+}
+
+.btn:focus,
+.btn:focus-visible {
+    outline: none;
+    box-shadow: none;
+}
+
+#hamburger {
+    display: none; /* Verbergen op desktop */
 }
 
 /* ==========================
@@ -413,15 +385,6 @@ nav a.active {
     opacity: .9;
 }
 
-.cta .btn {
-    background: #D62828;
-    color: #fff;
-}
-
-.cta .btn:hover {
-    background: #ececec;
-}
-
 /*=========================
       FOOTER
 =========================*/
@@ -500,7 +463,6 @@ footer {
     text-align: center;
     background: url("../assets/hero.jpg") center center/cover;
     position: relative;
-
 }
 
 .page-header::before {
@@ -548,71 +510,52 @@ section p {
 ==========================================*/
 
 .bestuur {
-
     padding: 120px 0;
-
 }
 
 .bestuur-grid {
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 35px;
-
 }
 
 .bestuur-card {
-
     background: var(--card);
     border-radius: 20px;
     overflow: hidden;
     transition: .35s;
-
     box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
-
 }
 
 .bestuur-card:hover {
-
     transform: translateY(-10px);
-
 }
 
 .bestuur-card img {
-
     width: 100%;
     height: 320px;
     object-fit: cover;
-
 }
 
 .bestuur-content {
-
     padding: 30px;
-
 }
 
 .bestuur-content h3 {
-
     font-family: 'Oswald', sans-serif;
     font-size: 1.8rem;
     margin-bottom: 8px;
-
 }
 
 .bestuur-content span {
-
     display: block;
     color: var(--secondary);
     margin-bottom: 20px;
     font-weight: 600;
-
 }
 
 .bestuur-content p {
-
     color: var(--gray);
-
 }
 
 /*==========================================
@@ -620,43 +563,30 @@ section p {
 ==========================================*/
 
 .inschrijven {
-
     padding: 120px 0;
-
 }
 
 .form-wrapper {
-
     max-width: 850px;
     margin: auto;
-
     background: var(--card);
-
     padding: 50px;
-
     border-radius: 25px;
-
 }
 
 .form-wrapper h2 {
-
     text-align: center;
     margin-bottom: 40px;
-
 }
 
 .form-group {
-
     margin-bottom: 25px;
-
 }
 
 .form-group label {
-
     display: block;
     margin-bottom: 10px;
     font-weight: 600;
-
 }
 
 .form-group input,
@@ -695,7 +625,6 @@ section p {
     border: none;
     cursor: pointer;
     margin-top: 15px;
-
 }
 
 #terms {
@@ -773,15 +702,12 @@ section p {
     overflow: hidden;
     border-radius: 20px;
     height: 400px;
-
 }
 
 .map iframe {
-
     width: 100%;
     height: 100%;
     border: none;
-
 }
 
 /*==========================================
@@ -789,61 +715,40 @@ section p {
 ==========================================*/
 
 .info-boxes {
-
     padding: 0 0 120px 0;
-
 }
 
 .info-grid {
-
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 30px;
-
 }
 
 .info-box {
-
     background: var(--card);
-
     padding: 40px;
-
     border-radius: 18px;
-
     text-align: center;
-
     transition: .3s;
-
 }
 
 .info-box:hover {
-
     transform: translateY(-8px);
-
 }
 
 .info-box i {
-
     font-size: 42px;
-
     color: var(--primary);
-
     margin-bottom: 20px;
-
 }
 
 .info-box h3 {
-
     margin-bottom: 15px;
-
     font-family: 'Oswald';
-
 }
 
 .info-box p {
-
     color: var(--gray);
-
 }
 
 /*==========================================
@@ -851,95 +756,66 @@ section p {
 ==========================================*/
 
 @media (max-width:1100px) {
-
     .hero-grid {
-
         grid-template-columns: 1fr;
         text-align: center;
-
     }
 
     .hero-content {
-
         order: 2;
-
     }
 
     .hero-image {
-
         order: 1;
         max-width: 600px;
         margin: auto;
-
     }
 
     .hero p {
-
         margin: auto;
-
     }
 
     .buttons {
-
         justify-content: center;
-
     }
 
     .about-grid {
-
         grid-template-columns: 1fr;
-
     }
 
     .contact-grid {
-
         grid-template-columns: 1fr;
-
     }
 
     .footer {
-
         grid-template-columns: 1fr 1fr;
-
     }
 
     .cards {
-
         grid-template-columns: repeat(2, 1fr);
-
     }
 
     .form-row {
-
         grid-template-columns: 1fr;
-
     }
 
 }
 
 @media (max-width:768px) {
-
     .nav {
-
         height: 80px;
-
     }
 
     .logo img {
-
         width: 60px;
-
     }
 
     #hamburger {
-
         display: block;
         z-index: 9999;
-
     }
 
     nav {
-
         position: fixed;
 
         top: 80px;
@@ -955,135 +831,93 @@ section p {
         display: flex;
         justify-content: center;
         align-items: center;
-
     }
 
     nav.active {
-
         left: 0;
-
     }
 
     nav ul {
-
         flex-direction: column;
         gap: 35px;
         text-align: center;
-
     }
 
     nav a {
-
         font-size: 1.2rem;
-
     }
 
     .nav .btn {
-
         display: none;
-
     }
 
     .hero {
-
         padding-top: 120px;
-
     }
 
     .hero h1 {
-
         font-size: 3.5rem;
-
     }
 
     .hero p {
-
         font-size: 1rem;
-
     }
 
     .cards {
-
         grid-template-columns: 1fr;
-
     }
 
     .about h2 {
-
         font-size: 2.3rem;
-
     }
 
     .about ul {
-
         grid-template-columns: 1fr;
-
     }
 
     .footer {
-
         grid-template-columns: 1fr;
 
         text-align: center;
-
     }
 
     .social {
-
         justify-content: center;
-
     }
 
     .page-header {
-
         height: 320px;
-
     }
 
     .page-header h1 {
-
         font-size: 2.8rem;
-
     }
 
     .contact-card {
-
         padding: 30px;
-
     }
 
     .form-wrapper {
-
         padding: 35px;
-
     }
-
 }
 
 @media(max-width:500px) {
 
     .container {
-
         width: 94%;
-
     }
 
     .hero h1 {
-
         font-size: 2.8rem;
-
     }
 
     .cta h2 {
-
         font-size: 2.2rem;
-
     }
 
     section {
-
         padding: 80px 0;
-
     }
 
     .btn,
@@ -1091,21 +925,15 @@ section p {
 
         width: 100%;
         text-align: center;
-
     }
 
     .buttons {
-
         flex-direction: column;
-
     }
 
     .hero-image img {
-
         border-radius: 20px;
-
     }
-
 }
 
 /*==========================================
@@ -1113,62 +941,46 @@ section p {
 ==========================================*/
 
 .fade-up {
-
     opacity: 0;
     transform: translateY(50px);
     transition: 1s;
-
 }
 
 .fade-up.show {
-
     opacity: 1;
     transform: translateY(0);
-
 }
 
 .zoom {
-
     overflow: hidden;
-
 }
 
 .zoom img {
-
     transition: .5s;
-
 }
 
 .zoom:hover img {
-
     transform: scale(1.08);
-
 }
 
 .card,
 .bestuur-card,
 .info-box,
 .contact-card {
-
     transition: .35s;
-
 }
 
 .card:hover,
 .bestuur-card:hover,
 .info-box:hover,
 .contact-card:hover {
-
     box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
-
 }
 
 .btn,
 .btn-outline,
 .social a {
-
     transition: .3s ease;
-
 }
 
 input,
@@ -1180,9 +992,7 @@ select {
 input:focus,
 textarea:focus,
 select:focus {
-
     box-shadow: 0 0 0 3px rgba(214, 40, 40, .2);
-
 }
 
 /*==========================================
@@ -1190,28 +1000,20 @@ select:focus {
 ==========================================*/
 
 ::-webkit-scrollbar {
-
     width: 10px;
-
 }
 
 ::-webkit-scrollbar-track {
-
     background: #111;
-
 }
 
 ::-webkit-scrollbar-thumb {
-
     background: var(--primary);
     border-radius: 30px;
-
 }
 
 ::-webkit-scrollbar-thumb:hover {
-
     background: #b71c1c;
-
 }
 
 /*==========================================
@@ -1219,10 +1021,8 @@ select:focus {
 ==========================================*/
 
 ::selection {
-
     background: var(--primary);
     color: #fff;
-
 }
 
 /*==========================================
@@ -1230,9 +1030,7 @@ select:focus {
 ==========================================*/
 
 .text-center {
-
     text-align: center;
-
 }
 
 .mt-1 {
@@ -1317,12 +1115,10 @@ select:focus {
 }
 
 @keyframes ripple {
-
     to {
         transform: scale(4);
         opacity: 0;
     }
-
 }
 
 .social {
